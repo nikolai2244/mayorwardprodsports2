@@ -1,9 +1,0 @@
-[build]
-  publish = "build"
-  functions = "netlify/functions"
-
-[functions]
-  node_bundler = "esbuild"
-
-[build.environment]
-  ODDS_API_KEY = "35ea2bfd08888692d90a60bb91273c16"

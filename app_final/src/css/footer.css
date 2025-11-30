@@ -1,0 +1,113 @@
+/* ---------------------------------------------------------
+   FOOTER.CSS — Medium Professional Footer (MW Style)
+   Matte dark, sharp, compact, premium
+----------------------------------------------------------*/
+
+/* ------------------------------
+   FOOTER WRAPPER
+------------------------------*/
+
+.footer-container {
+  width: 100%;
+  background: #0e0e10;
+  border-top: 2px solid #1d1d20;
+  padding: 18px 14px;
+  margin-top: 30px;
+  box-shadow: 0 -6px 14px rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 10;
+}
+
+/* ------------------------------
+   LEFT SIDE — LOGO + NAME
+------------------------------*/
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.45));
+}
+
+.footer-title {
+  font-family: var(--mw-font-heading);
+  font-size: 1.4rem;
+  color: var(--mw-accent-purple);
+  letter-spacing: 1px;
+}
+
+/* ------------------------------
+   RIGHT SIDE — LINKS
+------------------------------*/
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.footer-link {
+  color: #cccccc;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--mw-accent-red);
+}
+
+/* ------------------------------
+   COPYRIGHT
+------------------------------*/
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #1c1c1f;
+  font-size: 0.85rem;
+  color: #9d9d9d;
+  letter-spacing: 0.5px;
+}
+
+.footer-bottom strong {
+  color: var(--mw-accent-purple);
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------*/
+
+@media (max-width: 700px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left {
+    justify-content: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+    margin-top: 14px;
+  }
+
+  .footer-title {
+    font-size: 1.3rem;
+  }
+}

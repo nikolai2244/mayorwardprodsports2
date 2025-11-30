@@ -1,0 +1,171 @@
+/* ---------------------------------------------------------
+   HEADER.CSS — Slim Matte Header (ESPN-lite compact)
+----------------------------------------------------------*/
+
+.header-container {
+  width: 100%;
+  height: 60px; /* compact */
+  background: #0d0d0f;
+  border-bottom: 2px solid #1d1d20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 0 15px rgba(0,0,0,0.55);
+}
+
+/* -------------------------
+   LOGO
+--------------------------*/
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+}
+
+/* -------------------------
+   NAVIGATION TABS
+--------------------------*/
+
+.header-nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.nav-item {
+  color: #cccccc;
+  font-weight: 600;
+  padding: 6px 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  position: relative;
+  transition: 0.2s ease;
+}
+
+.nav-item:hover {
+  color: white;
+}
+
+/* Active tab underline */
+.nav-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #c11237, #7a2f9f);
+  border-radius: 2px;
+}
+
+/* -------------------------
+   RIGHT SIDE: LOGIN + SUPPORT
+--------------------------*/
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Login Button */
+
+.login-btn {
+  background: #202023;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #ededed;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #2c2c31;
+  transition: 0.15s ease;
+}
+
+.login-btn:hover {
+  background: #2a2a2e;
+}
+
+/* Support buttons (icons only or icon+text) */
+
+.support-btn {
+  background: #161618;
+  border: 1px solid #2c2c31;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: #aaaaaa;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.15s ease;
+}
+
+.support-btn:hover {
+  background: #222225;
+  color: white;
+}
+
+/* -------------------------
+   DISCLAIMER CARD (below header)
+--------------------------*/
+
+.disclaimer-bar {
+  width: 100%;
+  background: #161618;
+  border-bottom: 1px solid #242427;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  color: #c7c7c7;
+  text-align: center;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 40;
+}
+
+.disclaimer-bar strong {
+  color: var(--mw-accent-red);
+}
+
+/* -------------------------
+   MOBILE ADJUSTMENTS
+--------------------------*/
+
+@media (max-width: 720px) {
+
+  .header-container {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 6px 10px;
+    gap: 6px;
+  }
+
+  .header-nav {
+    width: 100%;
+    justify-content: center;
+    gap: 14px;
+    order: 3;
+    margin-top: -4px;
+  }
+
+  .header-right {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header-left {
+    order: 1;
+    width: 100%;
+    justify-content: center;
+  }
+}
